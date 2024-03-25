@@ -1,0 +1,24 @@
+.Navbar{
+    height: 90px;
+    width: 100%;
+   
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.navbar
+{
+    height: 80px;
+    width: 100%;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    color: white;
+   
+}
+input{
+    padding: 10px;
+    width: 300px;
+    color:black;
+}

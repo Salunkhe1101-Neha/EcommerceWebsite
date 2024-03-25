@@ -1,0 +1,33 @@
+.about
+{
+    width: 100%;
+    height: auto;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+
+.disc{
+       width: 50%;
+       margin-right: 100px;
+       
+}
+
+.tilt{
+margin-left: 100px;
+}
+
+.title{
+    margin-bottom: 10px;
+
+}
+.description{
+    margin-top: 10px;
+}
+
+.addTocart{
+    margin-top: 25px;
+    
+}
