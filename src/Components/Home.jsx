@@ -1,6 +1,7 @@
 import React from 'react'
 import Card from './Card'
 import './Card.css'
+import './Home.css'
 import Data from '../Data'
 const Home = ({ data, search, handleClick, setData }) => {
   function filterResult1(carItem) {
