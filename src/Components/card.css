@@ -6,9 +6,6 @@
     background-color: white;
     margin-top: 10px;
     transition: 0.5s ease-in-out;
-    
-
-
 }
 .cardDiv:hover{
     box-shadow: 2px 2px 4px #000000;
@@ -29,7 +26,7 @@
         width: 100%;
     }
 
-    .title{
+    .cardItem_title{
         height: 50px;
         overflow: hidden;
         /* background-color: rebeccapurple; */

@@ -32,7 +32,7 @@ const Home = ({ data, search, handleClick, setData }) => {
       <div className='btncon'>
         <aside className='filterBtns'>
           <button onClick={() => filterResult1(`men's clothing`)}>Men</button>
-          <button onClick={() => filterResult2(`women's clothing`)}>WoMen</button>
+          <button onClick={() => filterResult2(`women's clothing`)}>Women</button>
           <button onClick={() => filterResult3(`electronics`)}>Electronics</button>
           <button onClick={() => filterResult4(`jewelery`)}>Jewellary</button>
           <button onClick={() => filterResult5()}>All</button>

@@ -1,10 +1,11 @@
-import React from 'react'
-import { useParams } from 'react-router-dom'
-import { useState } from 'react'
-import './About.css'
+import React from 'react';
+import { useParams } from 'react-router-dom';
+import { useState } from 'react';
+import './About.css';
+
 const About = ({ Data, handleClick }) => {
-  const { id } = useParams()
-  const data = Data.find((data) => data.id === parseInt(id))
+  const { id } = useParams();
+  const data = Data.find((data) => data.id === parseInt(id));
   const [transform, setTransform] = useState({
     rotateX: 0,
     rotateY: 0,
@@ -22,9 +23,8 @@ const About = ({ Data, handleClick }) => {
     const offsetX = (clientX - middleX) / middleX;
     const offsetY = (middleY - clientY) / middleY;
 
-    const rotateY = offsetX * -20;  // Invert rotation for X-axis
-    const rotateX = offsetY * -20;  // Invert rotation for Y-axis
-
+    const rotateY = offsetX * -20; // Invert rotation for X-axis
+    const rotateX = offsetY * -20; // Invert rotation for Y-axis
 
     setTransform({
       rotateX,
@@ -40,26 +40,29 @@ const About = ({ Data, handleClick }) => {
   };
 
   return (
-   <>
-    <div className='about' style={{ textAlign: 'center', marginTop: '40px' }}>
-      <img className="tilt"
-        onMouseMove={handleMouseMove}
-        onMouseLeave={handleMouseLeave}
-        style={{
-          transform: `rotateY(${transform.rotateY}deg) rotateX(${transform.rotateX}deg) scale3d(1, 1, 1)`,
-          overflow: 'hidden',
-        }} src={data.image} height={'250px'} width={'200px'} alt="" />
-      <div className='disc'>
-        <h3 className='title'>{data.title}</h3>
-        <p className='description'>{data.description}</p>
-        <button onClick={() => handleClick(data)} className='addTocart'>Add cart</button>
-
-
+    <div className="container">
+      <div className="content">
+        <h3 className="title">{data.title}</h3>
+        <p className="description">{data.description}</p>
+        <button onClick={() => handleClick(data)} className="addTocart">
+          Add cart
+        </button>
+      </div>
+      <div className="image-container">
+        <img
+          className="tilt"
+          onMouseMove={handleMouseMove}
+          onMouseLeave={handleMouseLeave}
+          style={{
+            transform: `rotateY(${transform.rotateY}deg) rotateX(${transform.rotateX}deg) scale3d(1, 1, 1)`,
+            overflow: 'hidden',
+          }}
+          src={data.image}
+          alt=""
+        />
       </div>
     </div>
+  );
+};
 
-    </>
-  )
-}
-
-export default About
+export default About;

@@ -54,7 +54,7 @@ const Navbar = ({ setData, setSearch, cart}) => {
 
                 <Link style={linkStyle} to={'/cart'}>
                     <div className="navdiv">
-                        <h3>Cart <sup>{cart}</sup></h3>
+                        <h3>Cart<sup>{cart}</sup></h3>
                     </div>
                 </Link>
             </nav>
